@@ -15,13 +15,13 @@ build() {
         1.*)
             curl -sSL "https://www.openssl.org/source/openssl-$OPENSSL_VERSION.tar.gz" | tar xzvf -
             cd "openssl-$OPENSSL_VERSION"
-            ./Configure no-shared --openssldir=/etc/ssl
+            ./Configure no-shared --openssldir="$OPENSSL_DIR"
             make && make install
             ;;
         3.*)
             curl -sSL "https://www.openssl.org/source/openssl-$OPENSSL_VERSION.tar.gz" | tar xzvf -
             cd "openssl-$OPENSSL_VERSION"
-            ./Configure no-module no-shared --openssldir=/etc/ssl
+            ./Configure no-module no-shared --openssldir="$OPENSSL_DIR"
             make && make install
             ;;
     esac
