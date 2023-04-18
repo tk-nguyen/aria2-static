@@ -1,4 +1,4 @@
-FROM debian:latest AS build
+FROM ubuntu:latest AS build
 
 ARG TARGETPLATFORM
 ARG OPENSSL_VERSION

@@ -21,3 +21,10 @@ jobs:
         env:
           PLATFORMS: "linux/amd64,linux/arm64"
         uses: docker/bake-action@v2
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: aria2
+          path: build/**
+
